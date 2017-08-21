@@ -17,7 +17,6 @@ before_script:
   - npm install
   - npm run preupdate-webdriver
   - npm run update-webdriver
-  - npm run start-webdriver
   - npm run protractor
 
 script:
