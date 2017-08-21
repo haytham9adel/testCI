@@ -14,9 +14,7 @@ install:
   - sudo apt-get update -q
   - sudo apt-get install -q google-chrome-stable
 
-
 before_script:
-
   - npm install
   - npm run preupdate-webdriver
   - 'node_modules/protractor/bin/webdriver-manager update'
@@ -24,6 +22,5 @@ before_script:
   - sleep 3
 
 script:
-  - npm run start
   - npm run test-single-run
   - npm run protractor
