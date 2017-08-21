@@ -3,7 +3,7 @@ dist: trusty
 
 language: node_js
 node_js:
-  - '4.5'
+  - '7.2.1'
 
 install:
   - export DISPLAY=:99.0
@@ -16,6 +16,7 @@ install:
 before_script:
   - npm install
   - npm run preupdate-webdriver
+   - npm run update-webdriver
   - npm run start-webdriver
   - npm run protractor
 
