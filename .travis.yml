@@ -17,6 +17,7 @@ install:
 before_script:
   - npm install
   - npm run preupdate-webdriver
+  - npm install -g firebase-tools
   - 'node_modules/protractor/bin/webdriver-manager update'
   - 'node_modules/protractor/bin/webdriver-manager start 2>&1 &'
   - sleep 3
@@ -24,3 +25,6 @@ before_script:
 script:
   - npm run test-single-run
   - npm run protractor
+
+after_success:
+  - firebase deploy --token "1/RO4kD1mCmwoKyAMjMWEKc5quJBBGBNz7lkl_uHw21YM"
